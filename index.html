@@ -407,13 +407,16 @@
             </div>
             
             <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 CVTEC Soluções em Elétrica. Todos os direitos reservados.</p>
+                <p>&copy; <span id="ano-atual"></span> CVTEC Soluções em Elétrica. Todos os direitos reservados.</p>
                 <p class="mt-2">Eletricista profissional em Natal RN - Especialista em LED</p>
             </div>
         </div>
     </footer>
 
     <script>
+	// Atualiza o ano no rodapé automaticamente
+    	document.getElementById('ano-atual').textContent = new Date().getFullYear();
+
         // WhatsApp function
         function openWhatsApp() {
 	    if (typeof gtag === 'function') {
