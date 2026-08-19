@@ -416,6 +416,11 @@
     <script>
         // WhatsApp function
         function openWhatsApp() {
+	    if (typeof gtag === 'function') {
+            	gtag('event', 'conversion', {
+            		'send_to': 'AW-17722318958' 
+            	});
+            }
             const phoneNumber = "5584981740891";
             const message = "Olá! Vi seu anúncio no Google e gostaria de agendar um serviço de eletricista.";
             const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
